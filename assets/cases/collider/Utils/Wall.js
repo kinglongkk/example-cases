@@ -1,3 +1,6 @@
+/*
+*  顶部墙面
+* */
 var WallType = cc.Enum({
    Left: 0,
    Right: 1,
