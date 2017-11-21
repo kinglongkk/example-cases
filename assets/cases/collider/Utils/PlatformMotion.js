@@ -1,3 +1,6 @@
+/*
+* 砖块移动
+* */
 cc.Class({
     extends: cc.Component,
 
