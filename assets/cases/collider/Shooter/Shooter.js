@@ -1,3 +1,6 @@
+/*
+* 射手
+* */
 cc.Class({
     extends: cc.Component,
 
@@ -12,11 +15,12 @@ cc.Class({
     onLoad: function () {
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
+        // cc.director.getCollisionManager().enabledDrawBoundingBox = true;
         var canvas = cc.find('Canvas');
-        canvas.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+        canvas.on(cc.Node.EventType.TOUCH_START, this._onTouchBegan, this);
     },
 
-    onTouchBegan: function (event) {
+    _onTouchBegan: function (event) {
         var scene = cc.director.getScene();
         var touchLoc = event.touch.getLocation();
         var bullet = cc.instantiate(this.bullet);
