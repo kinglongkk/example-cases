@@ -1,15 +1,20 @@
+/*
+*  一个点击是否在一个多边形中demo
+* */
 cc.Class({
     extends: cc.Component,
 
     properties: {
         collider: {
             default: null,
-            type: cc.PolygonCollider
+            type: cc.PolygonCollider,
+            tooltip: "多边形碰撞组件"
         },
 
         title: {
             default: null,
-            type: cc.Label
+            type: cc.Label,
+            tooltip: "文字标签组件"
         }
     },
 
